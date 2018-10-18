@@ -19,7 +19,7 @@ namespace SiteKitBMISystem.Controllers
             //Dependencies can be injected via Dependency Ioc Containers which I normally use Unity
             //However I have covered so much and no time to couple dependency containers.
             var siteKitUnitOfWork = new SiteKitUnitOfWork(new BmiCategoryRepostory(), new BmiRepository(), new PatientRepository());
-            _unitOfWork = siteKitUnitOfWork as SiteKitUnitOfWork;
+            _unitOfWork = siteKitUnitOfWork;
         }
         public ActionResult Index()
         {
